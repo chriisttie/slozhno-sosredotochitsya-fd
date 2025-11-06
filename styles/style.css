@@ -2,4 +2,64 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  inline-size: 100%;
+  max-inline-size: 375px;
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: var(--accent-font);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+}
+
+.decorated-zone {
+  background-image: url(/images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 668px;
+}
+
+.heading-main {
+  font-size: 116px;
+  color: var(--title-color);
+  font-weight: bold;
+  line-height: 83%;
+  padding: 0 10px;
+}
+
+.heading-on-bg {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.heading-on-pink {
+  color: var(--bg-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.block-pink {
+  background-color: var(--accent-color);
+  max-height: 117px;
+  margin: 0 10px;
+  line-height: 23.4px;
+}
+
+.content-text {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.heading-on-pink-regular {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+  font-weight: normal;
 }
