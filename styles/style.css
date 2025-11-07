@@ -7,9 +7,16 @@
   margin: 0;
   background-color: var(--bg-color);
   font-family: var(--accent-font);
+  background-image: url(/images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
+  height: 100vh;
+  min-height: 668px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
@@ -17,19 +24,56 @@
 }
 
 .decorated-zone {
-  background-image: url(/images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 668px;
+  /*уголки*/
+}
+
+.content-section {
+  padding: 40px 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 50px;
 }
 
 .heading-main {
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--title-color);
   font-weight: bold;
   line-height: 83%;
   padding: 0 10px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header-decor {
+  font-family: var(--accent-font);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.header__theme-menu {
+  align-self: center;
+  justify-self: end;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-item {
+  margin-bottom: 11.5px;
+}
+
+.header__theme-menu-button {
+  font-family: var(--accent-font);
+  text-transform: lowercase;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  border-style: none;
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--accent-color);
 }
 
 .heading-on-bg {
@@ -38,10 +82,26 @@
   font-weight: bold;
 }
 
+.heading-main-on-pink {
+  color: var(--bg-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .heading-on-pink {
   color: var(--bg-color);
   font-size: 18px;
   font-weight: bold;
+  background-color: var(--accent-color);
+  margin: 20px 0 10px;
+}
+
+.heading-on-pink-regular {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px 0 10px;
 }
 
 .block-pink {
@@ -57,9 +117,32 @@
   font-weight: normal;
 }
 
-.heading-on-pink-regular {
-  color: var(--bg-color);
-  background-color: var(--accent-color);
-  font-size: 18px;
-  font-weight: normal;
+.text-shadow {
+  text-shadow: 2px 2px var(--accent-color);
+  text-decoration: none;
+}
+
+.block-four {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.picture {
+}
+
+.heading-main-footer {
+  font-size: 116px;
+  color: var(--title-color);
+  font-weight: bold;
+  line-height: 83%;
+  padding: 0 10px;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.footer {
+  height: 100vh;
+  min-height: 667px;
+  display: flex;
+  align-items: center;
 }
