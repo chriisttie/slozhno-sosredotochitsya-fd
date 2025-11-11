@@ -7,7 +7,7 @@
   margin: 0;
   background-color: var(--bg-color);
   font-family: var(--accent-font);
-  background-image: url(/images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,13 +83,13 @@
 }
 
 .heading-main-on-pink {
-  color: var(--bg-color);
+  color: var(--heading-color);
   font-size: 18px;
   font-weight: bold;
 }
 
 .heading-on-pink {
-  color: var(--bg-color);
+  color: var(--heading-color);
   font-size: 18px;
   font-weight: bold;
   background-color: var(--accent-color);
@@ -97,7 +97,7 @@
 }
 
 .heading-on-pink-regular {
-  color: var(--bg-color);
+  color: var(--heading-color);
   background-color: var(--accent-color);
   font-size: 18px;
   font-weight: normal;
@@ -107,6 +107,7 @@
 .block-pink {
   background-color: var(--accent-color);
   max-height: 117px;
+  max-width: 364px;
   margin: 0 10px;
   line-height: 23.4px;
 }
@@ -145,4 +146,27 @@
   min-height: 667px;
   display: flex;
   align-items: center;
+}
+
+@media (width > 768px) {
+  .page {
+    max-inline-size: 768px;
+  }
+
+  .header {
+    min-height: 1024px;
+  }
+
+  .block-one {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .heading-on-bg {
+    grid-row: 2 span;
+  }
+}
+
+@media (width > 1024px) {
 }
