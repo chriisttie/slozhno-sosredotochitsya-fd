@@ -12,13 +12,16 @@
 :root.theme-light {
   --main-font: monospace;
   --accent-font: "IBM Plex Mono";
+
   --bg-color: #fff1f7;
   --text-color: #353430;
   --heading-color: #353430;
+  --heading-and-menu-color: #353430;
   --title-color: #ffc2e6;
   --accent-color: #ff8dcb;
   --bg-image: url(/images/cover-image-light.png);
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -31,6 +34,14 @@
     --title-color: #ffc2e6;
     --accent-color: #ff8dcb;
     --bg-image: url(/images/cover-image-light.png);
+  }
+
+  .header__theme-menu {
+    color: var(--text-color);
+  }
+
+  .heading-on-bg {
+    color: var(--text-color);
   }
 
   /* Остальные стили, только при необходимости */
