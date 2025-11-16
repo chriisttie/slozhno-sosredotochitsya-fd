@@ -22,6 +22,9 @@
   --bg-image: url(/images/cover-image-light.png);
 }
 
+.theme-light .header-decor {
+  display: none;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -43,6 +46,4 @@
   .heading-on-bg {
     color: var(--text-color);
   }
-
-  /* Остальные стили, только при необходимости */
 }
