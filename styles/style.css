@@ -126,7 +126,7 @@
   line-height: 18px;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 3px 13px;
+  padding: 2.6px 13px;
   cursor: pointer;
 }
 
@@ -191,6 +191,12 @@
 }
 
 .block-two {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.block-two-span {
   display: flex;
   flex-direction: column;
   gap: 20px;
