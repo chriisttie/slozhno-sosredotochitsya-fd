@@ -22,7 +22,8 @@
   --bg-image: url(/images/cover-image-light.png);
 }
 
-.theme-light .header-decor {
+.theme-light .header-decor,
+.theme-light .header-decor::before {
   display: none;
 }
 
@@ -31,12 +32,19 @@
     /* Дублируем только те же переменные, что и выше */
     --main-font: monospace;
     --accent-font: "IBM Plex Mono";
+
     --bg-color: #fff1f7;
     --text-color: #353430;
     --heading-color: #353430;
     --title-color: #ffc2e6;
     --accent-color: #ff8dcb;
     --bg-image: url(/images/cover-image-light.png);
+    --heading-and-menu-color: #353430;
+  }
+
+  :root:not(.theme-dark) .header-decor,
+  :root:not(.theme-dark) .header-decor::before {
+    display: none;
   }
 
   .header__theme-menu {
