@@ -3,7 +3,6 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   inline-size: 100%;
-  /* max-inline-size: 375px; */
   margin: 0 auto;
   background-color: var(--bg-color);
   font-family: var(--accent-font);
@@ -118,6 +117,15 @@
   margin: 0;
 }
 
+.header__theme-menu-item:hover {
+  outline: 1px solid var(--accent-color);
+}
+
+:root:not(.theme-light) .header__theme-menu-item:hover,
+:root:not(.theme-light) .header__theme-menu-item:hover::before {
+  outline: 1px solid var(--accent-color);
+}
+
 .header__theme-menu-button {
   font-family: var(--accent-font);
   text-transform: lowercase;
@@ -127,6 +135,21 @@
   padding: 1.5px 13px;
   cursor: pointer;
   min-height: 26px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--heading-and-menu-color);
+}
+
+:root:not(.theme-light) .header__theme-menu-button:focus-visible,
+:root:not(.theme-light) .header__theme-menu-button:hover::before {
+  text-decoration: underline;
+  text-decoration-color: var(--heading-and-menu-color);
 }
 
 .header__theme-menu-button_active {
@@ -183,37 +206,21 @@
   text-decoration: none;
 }
 
-.block-one {
+.text-shadow:hover {
+  box-shadow: 0px 1px var(--text-color);
+}
+
+.text-shadow:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.block-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.block-two {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.block-two-span {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.block-three {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.block-four {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.block-four-pic {
+.block-section-four {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -236,8 +243,8 @@
 }
 
 .footer {
-  height: 100vh;
-  min-height: 668px;
+  block-size: 100vh;
+  min-block-size: 668px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,10 +253,6 @@
 }
 
 @media (width >= 768px) {
-  .page {
-    /*max-inline-size: 768px;*/
-  }
-
   :is(.header, .footer).decorated-zone::before {
     top: 20px;
     right: 20px;
@@ -340,7 +343,7 @@
   }
 
   .footer {
-    min-height: 1024px;
+    min-block-size: 1024px;
     margin-block-start: 60px;
   }
 
@@ -350,10 +353,6 @@
 }
 
 @media (width >= 1024px) {
-  .page {
-    /*max-inline-size: 1024px;*/
-  }
-
   .header {
     min-block-size: 768px;
   }
@@ -381,6 +380,6 @@
   }
 
   .footer {
-    min-height: 768px;
+    min-block-size: 768px;
   }
 }
