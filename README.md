@@ -1,2 +1,3 @@
 Что делать, когда не можешь делать ничего
 Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+https://github.com/chriisttie/slozhno-sosredotochitsya-fd.git
