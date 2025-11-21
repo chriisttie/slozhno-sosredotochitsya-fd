@@ -10,61 +10,92 @@
   */
 
 :root.theme-light {
-  --main-font: monospace;
-  --accent-font: "IBM Plex Mono";
-
   --bg-color: #fff1f7;
   --text-color: #353430;
   --heading-color: #353430;
   --heading-and-menu-color: #353430;
   --title-color: #ffc2e6;
   --accent-color: #ff8dcb;
-  --bg-image: url(/images/cover-image-light.png);
+  --bg-image: url(./images/cover-image-light.png);
+  --rec-theme: none;
 }
 
 .theme-light .header-decor,
 .theme-light .header-decor::before {
-  display: none;
+  display: var(--rec-theme);
 }
 
-.header__theme-menu-item:hover {
-  outline: 1px solid #32312d66;
+.theme-light .text-shadow {
+  text-shadow: 2px 2px var(--accent-color);
+  text-decoration: none;
+}
+
+.theme-light .text-shadow:hover {
+  box-shadow: 0px 1px var(--text-color);
+}
+
+.theme-light .text-shadow:focus {
+  outline: none;
+}
+
+.theme-light .text-shadow:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.theme-light .header__theme-menu-button:focus-visible,
+.theme-light .header__theme-menu-button:hover::before {
+  text-decoration: underline;
+  text-decoration-color: var(--heading-and-menu-color);
+}
+
+.theme-light .header__theme-menu-item:hover,
+.theme-light .header__theme-menu-item:hover::before {
+  outline: 1px solid var(--heading-and-menu-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем только те же переменные, что и выше */
-    --main-font: monospace;
-    --accent-font: "IBM Plex Mono";
-
     --bg-color: #fff1f7;
     --text-color: #353430;
     --heading-color: #353430;
     --title-color: #ffc2e6;
     --accent-color: #ff8dcb;
-    --bg-image: url(/images/cover-image-light.png);
+    --bg-image: url(./images/cover-image-light.png);
     --heading-and-menu-color: #353430;
+    --rec-theme: none;
   }
 
-  :root:not(.theme-dark) .header-decor,
-  :root:not(.theme-dark) .header-decor::before {
-    display: none;
+  .theme-light .header-decor,
+  .theme-light .header-decor::before {
+    display: var(--rec-theme);
   }
 
-  .header__theme-menu {
-    color: var(--text-color);
+  .theme-light .text-shadow {
+    text-shadow: 2px 2px var(--accent-color);
+    text-decoration: none;
   }
 
-  .heading-on-bg {
-    color: var(--text-color);
+  .theme-light .text-shadow:hover {
+    box-shadow: 0px 1px var(--text-color);
   }
 
-  .header__theme-menu-item:hover {
-    outline: 1px solid #32312d66;
-  }
-
-  :root:not(.theme-dark) .header__theme-menu-item:hover,
-  :root:not(.theme-dark) .header__theme-menu-item:hover::before {
+  .theme-light .text-shadow:focus {
     outline: none;
+  }
+
+  .theme-light .text-shadow:focus-visible {
+    outline: 1px solid var(--text-color);
+  }
+
+  .theme-light .header__theme-menu-item:hover,
+  .theme-light .header__theme-menu-item:hover::before {
+    outline: 1px solid var(--heading-and-menu-color);
+  }
+
+  .theme-light .header__theme-menu-button:focus-visible,
+  .theme-light .header__theme-menu-button:hover::before {
+    text-decoration: underline;
+    text-decoration-color: var(--heading-and-menu-color);
   }
 }

@@ -15,11 +15,6 @@
   --heading-and-menu-color: #ff0070;
   --title-color: #db00ff;
   --accent-color: #ff0070;
-  --bg-image: url(/images/cover-image-dark.png);
-}
-
-@media (prefers-color-scheme: dark) {
-  .header__theme-menu-item:hover {
-    outline: 1px solid #ff007066;
-  }
+  --bg-image: url(./images/cover-image-dark.png);
+  --rec-theme: flex;
 }
